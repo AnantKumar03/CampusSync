@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusSync – Faculty Appointment Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="authView" class="auth">
+  <div class="auth-wrap">
+    <h1>🎓 CampusSync</h1>
+    <p class="tagline">Faculty appointment booking</p>
+    <div class="auth-card">
+      <form id="loginForm">
+        <h2>Log in</h2>
+        <p class="muted small">Sign in to your account</p>
+        <label for="email">Email</label>
+        <input id="email" type="email" required autocomplete="username">
+        <label for="password">Password</label>
+        <input id="password" type="password" required autocomplete="current-password">
+        <button class="btn" type="submit">Log in</button>
+        <p class="muted small">Accounts are created by the admin.</p>
+        <!--<p class="hint small">Demo logins:<br>
+          Student: student@campussync.com / student123<br>
+          Faculty: faculty@campussync.com / faculty123<br>
+          Admin: admin@campussync.com / admin123</p>  -->
+      </form>
+      <p id="authMsg" class="error" role="alert"></p>
+    </div>
+  </div>
+</section>
+
+
+<section id="appView" hidden>
+  <aside class="side">
+    <div class="brand">🎓 CampusSync</div>
+    <div class="navbtn active">🏠 Dashboard</div>
+    <button class="navbtn logout" id="logoutBtn">🚪 Log out</button>
+  </aside>
+  <div class="mainwrap">
+    <header class="topbar">
+      <div class="user">
+        <div class="avatar" id="avatar"></div>
+        <div class="who"><b id="userName"></b><small id="userRole"></small></div>
+      </div>
+    </header>
+    <main id="content"></main>
+  </div>
+</section>
+
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
