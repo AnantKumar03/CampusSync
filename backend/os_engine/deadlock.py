@@ -1,5 +1,5 @@
 def deadlock_check(allocation, request):
-
+    # Simple deadlock detection for a small project demonstration.
     n = len(allocation)
     work = [1] * len(allocation[0])
     finish = [False] * n
